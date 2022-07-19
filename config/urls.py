@@ -8,7 +8,8 @@ from rest_framework import routers
 router = routers.DefaultRouter()
 router.register(r'cliente', ClienteViewSet)
 router.register(r'produto', ProdutoViewSet)
-router.register(r'pedido', PedidoViewSet)
+router.register(r'pedido', PedidoViewSet,basename='pedido')
+
 #router.register(r'pedido/cliente', PedidoPorClienteViewSet)
 
 urlpatterns = [
