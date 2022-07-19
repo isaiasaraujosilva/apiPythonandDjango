@@ -5,4 +5,4 @@ from api.models import cliente
 class ClienteSerializador(serializers.ModelSerializer):
     class Meta:
         model = cliente
-        Fields = ['id','nome','sobrenome','email','telefone']
+        fields = ['id','nome','sobrenome','email','telefone']
