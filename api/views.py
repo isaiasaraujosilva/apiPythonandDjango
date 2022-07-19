@@ -20,14 +20,14 @@ class ProdutoViewSet(viewsets.ModelViewSet):
 
 class PedidoViewSet(viewsets.ModelViewSet):
 
-    queryset = pedido.objects.all()
+    #queryset = pedido.objects.all()
     serializer_class = PedidoSerializador
-
+    # pedidos por cliente
     def get_queryset(self):
         queryset = pedido.objects.all()
         cliente = self.request.query_params.get('cliente')
 
         if cliente:
             queryset = queryset.filter(dados_do_cliente=cliente)
-            return queryset
+        return queryset
 
