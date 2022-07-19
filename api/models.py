@@ -9,3 +9,12 @@ class cliente(models.Model):
 
     def __str__(self):
         return self.nome
+
+class produto(models.Model):
+    nome_do_produto = models.CharField(max_length=30)
+    marca = models.CharField(max_length=30)
+    unidade = models.IntegerField()
+    
+
+    def __str__(self):
+        return self.nome_do_produto
