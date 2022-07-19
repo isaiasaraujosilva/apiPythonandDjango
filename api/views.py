@@ -31,4 +31,7 @@ class PedidoViewSet(viewsets.ModelViewSet):
         if cliente:
             queryset = queryset.filter(dados_do_cliente=cliente)
         return queryset
+
+class PedidoViewSet(viewsets.ModelViewSet):
+
     
