@@ -9,7 +9,7 @@ class ClienteSerializador(serializers.ModelSerializer):
 class ProdutoSerializador(serializers.ModelSerializer):
     class Meta:
         model = produto
-        fields = ['id','nome_do_produto','marca','unidade','valor_unidade']
+        fields = ['id','nome_do_produto','marca','quantidade','valor_unidade']
 class PedidoSerializador(serializers.ModelSerializer):
     class Meta:
         model = pedido

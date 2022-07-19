@@ -9,8 +9,8 @@ admin.site.register(cliente,clientes)
 #tabela produto
 
 class produtos(admin.ModelAdmin):
-    list_display = ('id','nome_do_produto','marca','unidade')
-    list_display_links = ('id','nome_do_produto','marca','unidade')
+    list_display = ('id','nome_do_produto','marca','quantidade')
+    list_display_links = ('id','nome_do_produto','marca','quantidade')
     search_fields = ['nome_do_produto']
 admin.site.register(produto,produtos) 
 

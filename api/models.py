@@ -13,7 +13,7 @@ class cliente(models.Model):
 class produto(models.Model):
     nome_do_produto = models.CharField(max_length=30)
     marca = models.CharField(max_length=30)
-    unidade = models.IntegerField()
+    quantidade = models.IntegerField()
     valor_unidade = models.FloatField()
     
 
