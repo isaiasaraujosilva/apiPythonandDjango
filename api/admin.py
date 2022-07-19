@@ -15,7 +15,7 @@ class produtos(admin.ModelAdmin):
 admin.site.register(produto,produtos) 
 
 class pedidos(admin.ModelAdmin):
-    list_display = ('id','dados_do_pedido','quantidades','dados_do_cliente','valor_do_pedido')
-    list_display_links = ('id','dados_do_pedido','quantidades','dados_do_cliente','valor_do_pedido')
+    list_display = ('id','dados_do_pedido','quantidades','dados_do_cliente','valor_do_pedido','concluido')
+    list_display_links = ('id','dados_do_pedido','quantidades','dados_do_cliente','valor_do_pedido','concluido')
     search_fields = ['dados_do_pedido']
 admin.site.register(pedido,pedidos) 
