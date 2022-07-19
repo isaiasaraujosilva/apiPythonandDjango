@@ -1,5 +1,5 @@
 from django.contrib import admin
-from api.models import cliente,produto, pedido
+from api.models import cliente,produto, pedido, faturamento
 # Register your models here.
 class clientes(admin.ModelAdmin):
     list_display = ('id','nome','sobrenome','email','telefone')
@@ -19,3 +19,8 @@ class pedidos(admin.ModelAdmin):
     list_display_links = ('id','dados_do_pedido','quantidades','dados_do_cliente','valor_do_pedido','pedido_concluido')
     search_fields = ['dados_do_pedido']
 admin.site.register(pedido,pedidos) 
+
+class faturamentos(admin.ModelAdmin):
+    list_display = ('id','dados_do_pedido','quantidades','dados_do_cliente','pedido_concluido')
+    list_display_links = ('id','dados_do_pedido','quantidades','dados_do_cliente','pedido_concluido')
+admin.site.register(faturamento, faturamentos) 

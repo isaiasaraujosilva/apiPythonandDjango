@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from api.models import cliente, produto, pedido
-from api.serializer import ClienteSerializador, ProdutoSerializador, PedidoSerializador
+from api.models import cliente, faturamento, produto, pedido
+from api.serializer import ClienteSerializador, ProdutoSerializador, PedidoSerializador, faturamentoSerializador
 from rest_framework.decorators import action
 from rest_framework.filters import SearchFilter
 ##from rest_framework.permissions import AllowAny, IsAuthenticated
@@ -32,6 +32,7 @@ class PedidoViewSet(viewsets.ModelViewSet):
             queryset = queryset.filter(dados_do_cliente=cliente)
         return queryset
 
-class PedidoViewSet(viewsets.ModelViewSet):
+class faturamentoViewSet(viewsets.ModelViewSet):
+    queryset = faturamento.objects.all()
+    serializer_class = faturamentoSerializador
 
-    

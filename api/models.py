@@ -29,20 +29,28 @@ class pedido(models.Model):
     produto = models.ManyToManyField(produto)
     quantidades = models.IntegerField()
     dados_do_cliente = models.ForeignKey(cliente, on_delete=models.CASCADE)
-    pedido_concluido = models.CharField(max_length=30);   
+    pedido_concluido = models.CharField(max_length=30)
+
 
     @property
     def valor_do_pedido(self):
         total = 0
         for produto in self.produto.all():
             total += produto.valor_unidade
-        return total
-
-    valor_do_pedido = valor_do_pedido
+            return total
+        valor_do_pedido = valor_do_pedido
+    
     def __str__(self):
         return self.dados_do_pedido
-class faturamento():
-    faturamento = 10;
+class faturamento(models.Model):
+    
+   
+
+
+
+
+
+
             
 
 
