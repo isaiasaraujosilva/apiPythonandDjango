@@ -1,6 +1,7 @@
 from dataclasses import fields
 from rest_framework import serializers
 from api.models import cliente, produto, pedido
+
     
 class ClienteSerializador(serializers.ModelSerializer):
     class Meta:
@@ -13,4 +14,6 @@ class ProdutoSerializador(serializers.ModelSerializer):
 class PedidoSerializador(serializers.ModelSerializer):
     class Meta:
         model = pedido
-        fields = ['id','dados_do_pedido','produto','quantidades','dados_do_cliente']
+        valor = 10
+        fields = ['id','dados_do_pedido','produto','quantidades','dados_do_cliente','valor_do_pedido']
+        

@@ -1,6 +1,21 @@
 from django.db import models
-
+from django.db.models import Sum, Min
 # Create your models here.
+    
+@property
+def valor_do_pedido(self):
+    total = 0
+    for produto in self.produto.all():
+        total += 1#produto.valor_unidade
+    return total
+# @property
+# def soma(self):
+#     teste = produto
+#     total = 0
+#     for valor in teste:
+#         total += produto.valor_unidade
+#     return total
+
 class cliente(models.Model):
     nome = models.CharField(max_length=30)
     sobrenome = models.CharField(max_length=30)
@@ -15,6 +30,7 @@ class produto(models.Model):
     marca = models.CharField(max_length=30)
     quantidade = models.IntegerField()
     valor_unidade = models.FloatField()
+
     
 
     def __str__(self):
@@ -22,10 +38,13 @@ class produto(models.Model):
 
 class pedido(models.Model):
     dados_do_pedido = models.CharField(max_length=30) 
-    produto = models.ForeignKey(produto, on_delete=models.CASCADE)
+    produto = models.ManyToManyField(produto)
     quantidades = models.IntegerField()
-    dados_do_cliente = models.ForeignKey(cliente, on_delete=models.CASCADE)
-    
-
+    dados_do_cliente = models.ForeignKey(cliente, on_delete=models.CASCADE)   
+    valor_do_pedido = valor_do_pedido
     def __str__(self):
         return self.dados_do_pedido
+
+
+    
+

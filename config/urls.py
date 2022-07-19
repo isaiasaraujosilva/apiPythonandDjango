@@ -10,6 +10,7 @@ router.register(r'cliente', ClienteViewSet)
 router.register(r'produto', ProdutoViewSet)
 router.register(r'pedido', PedidoViewSet,basename='pedido')
 
+
 #router.register(r'pedido/cliente', PedidoPorClienteViewSet)
 
 urlpatterns = [
