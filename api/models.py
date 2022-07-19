@@ -14,7 +14,7 @@ class produto(models.Model):
     nome_do_produto = models.CharField(max_length=30)
     marca = models.CharField(max_length=30)
     unidade = models.IntegerField()
-    valorUni = models.FloatField()
+    valor_unidade = models.FloatField()
     
 
     def __str__(self):
