@@ -21,6 +21,6 @@ class pedidos(admin.ModelAdmin):
 admin.site.register(pedido,pedidos) 
 
 class faturamentos(admin.ModelAdmin):
-    list_display = ('id','dados_do_pedido','quantidades','dados_do_cliente','pedido_concluido')
-    list_display_links = ('id','dados_do_pedido','quantidades','dados_do_cliente','pedido_concluido')
+    list_display = ('id','faturamento_total')
+    list_display_links = ('id','faturamento_total')
 admin.site.register(faturamento, faturamentos) 

@@ -1,3 +1,4 @@
+from multiprocessing.sharedctypes import Value
 from django.db import models
 from django.db.models import Sum, Min
 # Create your models here.
@@ -32,19 +33,21 @@ class pedido(models.Model):
     pedido_concluido = models.CharField(max_length=30)
 
 
-    @property
+    
     def valor_do_pedido(self):
         total = 0
         for produto in self.produto.all():
             total += produto.valor_unidade
             return total
-        valor_do_pedido = valor_do_pedido
+        valor_do_pedido = models.FloatField(valor_do_pedido())
     
     def __str__(self):
         return self.dados_do_pedido
 class faturamento(models.Model):
-    
-   
+    #pedido = models.ManyToManyField(pedido)
+    result = pedido.objects.raw('select sum(valor_do_pedido) from pedido') 
+    print(result)
+    faturamento_total = models.FloatField()
 
 
 

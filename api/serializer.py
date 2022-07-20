@@ -18,8 +18,7 @@ class PedidoSerializador(serializers.ModelSerializer):
         #valor = 10
         fields = ['id','dados_do_pedido','produto','quantidades','dados_do_cliente','valor_do_pedido','pedido_concluido']
 
-class faturamentoSerializador(serializers.Serializer):
-    
-     class Meta:
+class faturamentoSerializador(serializers.ModelSerializer):
+    class Meta:
         model = faturamento
-        fields = ['id','faturamento_total']
+        fields = ['faturamento_total']
