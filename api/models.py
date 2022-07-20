@@ -45,9 +45,14 @@ class pedido(models.Model):
         return self.dados_do_pedido
 class faturamento(models.Model):
     #pedido = models.ManyToManyField(pedido)
-    result = pedido.objects.raw('select sum(valor_do_pedido) from pedido') 
-    print(result)
-    faturamento_total = models.FloatField()
+    #result = pedido.objects.raw('select sum(valor_do_pedido) from pedido') 
+    #print(result)
+    faturamento_total = 10
+class lucro(models.Model):
+    #pedido = models.ManyToManyField(pedido)
+    #result = pedido.objects.raw('select sum(valor_do_pedido) from pedido') 
+    #print(result)
+    lucro_total = 10
 
 
 

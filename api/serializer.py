@@ -1,7 +1,7 @@
 from dataclasses import fields
 from rest_framework import serializers
 from django.db.models import Sum, Min
-from api.models import cliente, faturamento, produto, pedido, faturamento
+from api.models import cliente, faturamento, produto, pedido, faturamento, lucro
 
     
 class ClienteSerializador(serializers.ModelSerializer):
@@ -21,4 +21,8 @@ class PedidoSerializador(serializers.ModelSerializer):
 class faturamentoSerializador(serializers.ModelSerializer):
     class Meta:
         model = faturamento
+        fields = ['faturamento_total']
+class lucroSerializador(serializers.ModelSerializer):
+    class Meta:
+        model = lucro
         fields = ['faturamento_total']

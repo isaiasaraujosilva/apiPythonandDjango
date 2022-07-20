@@ -1,5 +1,5 @@
 from django.contrib import admin
-from api.models import cliente,produto, pedido, faturamento
+from api.models import cliente,produto, pedido, faturamento, lucro
 # Register your models here.
 class clientes(admin.ModelAdmin):
     list_display = ('id','nome','sobrenome','email','telefone')
@@ -24,3 +24,7 @@ class faturamentos(admin.ModelAdmin):
     list_display = ('id','faturamento_total')
     list_display_links = ('id','faturamento_total')
 admin.site.register(faturamento, faturamentos) 
+class lucros(admin.ModelAdmin):
+    list_display = ('id','lucro_total')
+    list_display_links = ('id','lucro_total')
+admin.site.register(lucro, lucros) 
