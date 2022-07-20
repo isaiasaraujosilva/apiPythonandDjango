@@ -44,17 +44,11 @@ class pedido(models.Model):
     def __str__(self):
         return self.dados_do_pedido
 class faturamento(models.Model):
-    #pedido = models.ManyToManField(pedido)
-    #result = pedido.objects.raw('select sum(valor_do_pedido) from pedido') 
-    #print(result)
     query = 'SELECT sum(produto_id) FROM api.api_pedido_produto'
     total = pedido.objects.raw(query)
     print(total)
     faturamento_total = 1000 #Aqui em um futuro proximo aqui ficara a implementação do faturamento
 class lucro(models.Model):
-    #pedido = models.ManyToManyField(pedido)
-    #result = pedido.objects.raw('select sum(valor_do_pedido) from pedido') 
-    #print(result)
     lucro_total = 500 #Aqui em um futuro proximo, ficara a implementação do lucro
 
 
