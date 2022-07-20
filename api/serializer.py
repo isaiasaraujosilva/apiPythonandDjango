@@ -25,4 +25,4 @@ class faturamentoSerializador(serializers.ModelSerializer):
 class lucroSerializador(serializers.ModelSerializer):
     class Meta:
         model = lucro
-        fields = ['faturamento_total']
+        fields = ['lucro_total']
