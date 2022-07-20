@@ -39,15 +39,12 @@ class pedido(models.Model):
         for produto in self.produto.all():
             total += produto.valor_unidade
             return total
-        valor_do_pedido = models.FloatField(valor_do_pedido())
+        valor_do_pedido = valor_do_pedido()
     
     def __str__(self):
         return self.dados_do_pedido
 class faturamento(models.Model):
-    query = 'SELECT sum(produto_id) FROM api.api_pedido_produto'
-    total = pedido.objects.raw(query)
-    print(total)
-    faturamento_total = 1000 #Aqui em um futuro proximo aqui ficara a implementação do faturamento
+    faturamento_total = 1000 #Aqui em um futuro proximo, ficara a implementação do faturamento
 class lucro(models.Model):
     lucro_total = 500 #Aqui em um futuro proximo, ficara a implementação do lucro
 
