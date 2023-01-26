@@ -21,8 +21,22 @@ Projeto desenvolvido para o processo seletivo da Fabrica de Genio. Vaga desenvol
 ## Instalações
 
 ### python no windows 
+Instalando o Python 3 no Windows
+Para instalar o Python no seu sistema operacional Windows, você precisa baixar o instalador. 
 
-###python no ubuntu
+Acesse o site oficial neste link http://python.org.br/instalacao-windows/
+
+### python no ubuntu
+
+Apt-get
+
+Para instalar o Python 3, digite em um terminal:
+
+      sudo apt-get install python3
+
+(Opcional) Para instalar o gerenciador de pacotes pip, digite em um terminal:
+      
+      sudo apt-get install python3-pip
 
 ### django:
 
