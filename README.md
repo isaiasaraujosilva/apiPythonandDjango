@@ -18,6 +18,7 @@ Projeto desenvolvido para o processo seletivo da Fabrica de Genio. Vaga desenvol
     * Django 
     * Rest_framework
     * Mysql
+    * mysqlcliente
 ## Instalações
 
 ### python no windows 
@@ -74,3 +75,6 @@ No Ubuntu 20.04, você pode instalar o MySQL usando o repositório de pacotes AP
     1. sudo mysql
     2. ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
     3. exit
+### Mysqlcliente
+
+    pip install mysqlcliente
