@@ -19,6 +19,11 @@ Projeto desenvolvido para o processo seletivo da Fabrica de Genio. Vaga desenvol
     * Rest_framework
     * Mysql
 ## Instalações
+
+### python no windows 
+
+###python no ubuntu
+
 ### django:
 
   O Django pode ser facilmente instalado dentro de seu ambiente virtual usando o pip.
@@ -33,4 +38,8 @@ Projeto desenvolvido para o processo seletivo da Fabrica de Genio. Vaga desenvol
     pip install markdown    
     pip install django-filter
     
-###
+### Mysql server no Windows
+
+### Mysql server no Ubuntu
+
+
