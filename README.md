@@ -65,12 +65,12 @@ Para instalar o Python 3, digite em um terminal:
 ### Instalando o MySQL
 No Ubuntu 20.04, você pode instalar o MySQL usando o repositório de pacotes APT. No momento da redação deste artigo, a versão do MySQL disponível no                   repositório padrão do Ubuntu é a versão 8.0.27.
 
-  1. sudo apt update
-  2. sudo apt install mysql-server
-        
-Certifique-se de que o servidor esteja em execução usando o systemctl startcomando:
-
-3. sudo systemctl start mysql.service
+    1. sudo apt update
+    2. sudo apt install mysql-server
+    3. sudo systemctl start mysql.service
 
 ### Configurando o MySQL
-
+  
+  1. sudo mysql
+  2. ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+  3. exit
