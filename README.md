@@ -15,8 +15,22 @@ Projeto desenvolvido para o processo seletivo da Fabrica de Genio. Vaga desenvol
 
 ## Pré-requisitos.
     * Python 3.10
-    * Django
+    * Django 
     * Rest_framework
+    * Mysql
 ## Instalações
-  * django: pip install django
-  * Rest_framework pip install rest_framework
+### django:
+
+  O Django pode ser facilmente instalado dentro de seu ambiente virtual usando o pip.
+    Na linha de comando, assegure-se que seu ambiente virtual esteja ativo, e execute o seguinte comando.
+    
+    pip install django
+### Rest_framework pip install rest_framework
+        
+    Instale usando pip, incluindo quaisquer pacotes opcionais que você deseja...
+    
+    pip install djangorestframework
+    pip install markdown    
+    pip install django-filter
+    
+###
