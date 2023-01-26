@@ -75,6 +75,6 @@ No Ubuntu 20.04, você pode instalar o MySQL usando o repositório de pacotes AP
     1. sudo mysql
     2. ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
     3. exit
-### Mysqlcliente
+### drive python-mysql Mysqlcliente
 
     pip install mysqlcliente
