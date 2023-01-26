@@ -52,8 +52,25 @@ Para instalar o Python 3, digite em um terminal:
     pip install markdown    
     pip install django-filter
     
-### Mysql server no Windows
-
+### Mysql server no Windows atraves do XAMPP
+  
+  * O XAMPP é uma distribuição do Apache fácil de instalar contendo PHP, MySQL e Perl. Basta fazer o download e iniciar o instalador. É simples assim!
+  
+  * utilize algum cliente Mysql da sua preferencia para criar o banco "api"
+  
+  * CREATE DATABASE api;
+  
 ### Mysql server no Ubuntu
+    
+### Instalando o MySQL
+No Ubuntu 20.04, você pode instalar o MySQL usando o repositório de pacotes APT. No momento da redação deste artigo, a versão do MySQL disponível no                   repositório padrão do Ubuntu é a versão 8.0.27.
 
+  1. sudo apt update
+  2. sudo apt install mysql-server
+        
+Certifique-se de que o servidor esteja em execução usando o systemctl startcomando:
+
+3. sudo systemctl start mysql.service
+
+### Configurando o MySQL
 
